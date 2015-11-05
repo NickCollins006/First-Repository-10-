@@ -1,0 +1,28 @@
+import datetime
+from datetime import date
+
+year = ''
+month = ''
+day = ''
+def dayfinder():
+	year = int(input('What year were you born? (enter in integer form ex.2011 = 2011): '))
+	month = int(raw_input('What month were you born in? (ex. June = 6): '))
+	day = int(raw_input('What day were you born on? : '))
+	weekday = date(year, month, day).isoweekday()
+	if weekday == 1:
+		weekday = 'Monday'
+	elif weekday == 2:
+		weekday = 'Tuesday'
+	elif weekday == 3:
+		weekday = 'Wednesday'
+	elif weekday == 4:
+		weekday = 'Thursday'
+	elif weekday == 5:
+		weekday = 'Friday'
+	elif weekday == 6:
+		weekday = 'Saturday'
+	else:
+		weekday = 'Sunday'
+		
+	return 'You were born on a ' + weekday +'.'
+print dayfinder()
